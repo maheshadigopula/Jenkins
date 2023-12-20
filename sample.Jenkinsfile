@@ -1,5 +1,7 @@
 pipeline {
-    agent WS-java
+    agent {
+        label 'ANSIBLE'
+    }
     environment { 
         url = "global.com"
         SSH_CREDS = credentials('SSH_CREDS')
