@@ -6,16 +6,17 @@ pipeline {
     }
 
     options {
-        timeout(time: 1, unit: 'MINUTES')
+        timeout(time: 26, unit: 'SECONDS')
         buildDiscarder(logRotator(numToKeepStr: '1'))
         disableConcurrentBuilds(abortPrevious: true)
-         
+
     }
 
     stages {
         stage('Stage one') {
             steps {
                 echo "url is ${url}"
+                sleep(30)
             }
         }
 
