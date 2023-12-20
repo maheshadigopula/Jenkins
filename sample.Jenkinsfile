@@ -46,13 +46,14 @@ pipeline {
 
         stage('Stage Five') {
             when { 
-                environment name: 'CHOICE', value: 'Three' 
+                environment name: 'CHOICE', value: 'One' 
                 }
             steps {
                 sh '''
                 echo "Hey Hi Amrutha!"
                 echo "Muskoni kurcho"
                 mvn --version
+                hostname
                 '''
             }
         }
