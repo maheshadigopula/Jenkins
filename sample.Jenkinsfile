@@ -12,8 +12,11 @@ pipeline {
         }
 
         stage('Stage Two') {
+            environment { 
+                url = "local.com"
+            }
             steps {
-                echo 'Hello Amrutha'
+                echo 'Url is ${url}'
             }
         }
 
