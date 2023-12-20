@@ -7,9 +7,13 @@ pipeline {
 
     options {
         // timeout(time: 26, unit: 'SECONDS')
-        buildDiscarder(logRotator(numToKeepStr: '1'))
-        disableConcurrentBuilds(abortPrevious: true)
+        // buildDiscarder(logRotator(numToKeepStr: '1'))
+        // disableConcurrentBuilds(abortPrevious: true)
 
+    }
+
+    tools {
+        maven 'mvn-396'
     }
 
     parameters {
