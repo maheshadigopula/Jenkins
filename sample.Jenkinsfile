@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment { 
-        url = 'global.com'
+        url = "global.com"
     }
 
     stages {
         stage('Stage one') {
             steps {
-                echo 'url is ${{url}}'
+                echo 'url is ${url}'
             }
         }
 
