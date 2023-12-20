@@ -27,38 +27,39 @@ pipeline {
     }
 
     stages {
-        stage('parallel-stage')
-        {
-            stage('Stage one') {
-                steps {
-                    echo "url is ${url}"
-                    // sleep(1)
+        stage('parallel-stage'){
+                parallel{
+                stage('Stage one') {
+                    steps {
+                        echo "url is ${url}"
+                        // sleep(1)
 
-                }
-            }
-
-            stage('Stage Two') {
-                environment { 
-                    url = "local.com"
-                }
-                steps {
-                    echo "Url is ${url}"
-                }
-            }
-
-            stage('Stage Five') {
-                when { 
-                    environment name: 'CHOICE', value: 'One' 
                     }
-                steps {
-                    sh '''
-                    echo "Hey Hi Amrutha!"
-                    echo "Muskoni kurcho"
-                    mvn --version
-                    hostname
-                    '''
                 }
-            }
+
+                stage('Stage Two') {
+                    environment { 
+                        url = "local.com"
+                    }
+                    steps {
+                        echo "Url is ${url}"
+                    }
+                }
+
+                stage('Stage Five') {
+                    when { 
+                        environment name: 'CHOICE', value: 'One' 
+                        }
+                    steps {
+                        sh '''
+                        echo "Hey Hi Amrutha!"
+                        echo "Muskoni kurcho"
+                        mvn --version
+                        hostname
+                        '''
+                    }
+                }
+             }
         }
     }
 
