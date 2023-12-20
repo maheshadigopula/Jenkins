@@ -5,6 +5,10 @@ pipeline {
         SSH_CREDS = credentials('SSH_CREDS')
     }
 
+    options {
+        timeout(time: 1, unit: 'MINUTES') 
+    }
+
     stages {
         stage('Stage one') {
             steps {
