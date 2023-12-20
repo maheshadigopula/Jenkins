@@ -16,13 +16,13 @@ pipeline {
                 url = "local.com"
             }
             steps {
-                echo 'Url is ${url}'
+                echo "Url is ${url}"
             }
         }
 
         stage('Stage Five') {
             steps {
-                echo 'Hello Amrutha'
+                echo "Hello Amrutha"
             }
         }
     }
