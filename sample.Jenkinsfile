@@ -28,7 +28,8 @@ pipeline {
         stage('Stage one') {
             steps {
                 echo "url is ${url}"
-                sleep(1)
+                // sleep(1)
+
             }
         }
 
@@ -46,7 +47,7 @@ pipeline {
                 sh '''
                 echo "Hey Hi Amrutha!"
                 echo "Muskoni kurcho"
-                env
+                mvn --version
                 '''
             }
         }
