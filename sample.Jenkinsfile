@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment { 
         url = "global.com"
-        SSH_CREDS = credentials('SSH_CRED')
+        SSH_CREDS = credentials('SSH_CREDS')
     }
 
     stages {
