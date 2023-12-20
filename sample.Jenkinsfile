@@ -43,6 +43,9 @@ pipeline {
         }
 
         stage('Stage Five') {
+            when { 
+                environment name: 'CHOICE', value: 'Three' 
+                }
             steps {
                 sh '''
                 echo "Hey Hi Amrutha!"
