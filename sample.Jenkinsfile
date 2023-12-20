@@ -22,7 +22,10 @@ pipeline {
 
         stage('Stage Five') {
             steps {
-                echo "Hello Amrutha"
+                sh '''
+                echo "Hey Hi Amrutha!"
+                echo "Muskoni kurcho"
+                '''
             }
         }
     }
