@@ -7,21 +7,18 @@ pipeline {
                 echo 'Hello Amrutha'
             }
         }
-    }
 
-    stages {
         stage('Stage Two') {
             steps {
                 echo 'Hello Amrutha'
             }
         }
-    }
 
-    stages {
-        stage('Stage Three') {
+        stage('Stage Five') {
             steps {
                 echo 'Hello Amrutha'
             }
         }
     }
+
 }
