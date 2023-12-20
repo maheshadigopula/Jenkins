@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Stage one') {
             steps {
-                echo 'url is ${url}'
+                echo 'url is ${{url}}'
             }
         }
 
