@@ -25,6 +25,7 @@ pipeline {
                 sh '''
                 echo "Hey Hi Amrutha!"
                 echo "Muskoni kurcho"
+                env
                 '''
             }
         }
