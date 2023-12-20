@@ -5,12 +5,12 @@ pipeline {
         SSH_CREDS = credentials('SSH_CREDS')
     }
 
-    options {
-        // timeout(time: 26, unit: 'SECONDS')
-        // buildDiscarder(logRotator(numToKeepStr: '1'))
-        // disableConcurrentBuilds(abortPrevious: true)
+    // options {
+    //     // timeout(time: 26, unit: 'SECONDS')
+    //     // buildDiscarder(logRotator(numToKeepStr: '1'))
+    //     // disableConcurrentBuilds(abortPrevious: true)
 
-    }
+    // }
 
     tools {
         maven 'mvn-396'
